@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>Three.js Interaction</title>
+
+<script src="../libs/jquery-1.9.1/jquery-1.9.1.js"></script>
+<script src="../libs/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js"></script>
+
+<script src="../libs/three.js/three.js"></script>
+<script src="../libs/requestAnimationFrame/RequestAnimationFrame.js"></script>
+
+<script src="../libs/tween.js/tween.min.js"></script>
+<script src="../libs/keyframe.js/keyframe.js"></script>
+
+<script src="../libs/requestAnimationFrame/RequestAnimationFrame.js"></script>
+
+<script src="threejsInteraction.js"></script>
+
+<style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      border: 0;
+      overflow: hidden; 
+      display: block;  
+    }
+    #stats {
+        position: absolute;
+        top: 300px; left: 820px; width: 100%;
+        color: #000000;
+        padding: 5px;
+        font-family: monospace;
+        font-size: 13px;
+        text-align: center;
+        z-index: 100;
+    }
+</style>
+
+<script type="text/javascript">
+  
+	$(document).ready(
+			function() {
+                //animateSequence();
+
+				var canvas = document.getElementById("webglcanvas");
+
+                createScene(canvas);
+
+                run();
+			}
+	);
+
+</script>
+
+</head>
+<body>
+        <div id="stats">
+                <p id = "gameStart">Click me to 
+                    start the game!</p>
+                <p>
+
+                </p>
+                <p id = "scoreboard">
+                    
+                </p>
+        </div>
+<div id="container">
+    
+    <canvas id="webglcanvas">
+    </canvas>
+</div>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js - pointerlock controls</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="threejsPointerLock.css" />
+        
+        <script src="threejsPointerLock.js"></script>
+        
+		<script src="../libs/three.js/three.js"></script>
+        <script src="../libs/three.js/controls/PointerLockControls.js"></script>
+        <script src="../libs/jquery-1.9.1/jquery-1.9.1.js"></script>
+        <script src="../libs/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js"></script>
+        <script src="../libs/three.js/loaders/OBJLoader.js"></script>
+        <script src="../libs/colorpicker/js/colorpicker.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(
+                    function() {
+        
+                        var canvas = document.getElementById("webglcanvas");
+        
+                        // create the scene
+                        createScene(canvas);
+                        
+                        // init();
+                        initPointerLock();
+
+                        run();
+                    }
+            );
+        
+        </script>
+
+        <style>
+            html, body {
+              width: 100%;
+              height: 100%;
+              margin: 0px;
+              border: 0;
+              overflow: hidden; 
+              display: block;  
+            }
+            #stats {
+                position: absolute;
+                top: 100px; left: 700px; width: 100%;
+                color: #000000;
+                padding: 5px;
+                font-family: monospace;
+                font-size: 30px;
+                text-align: center;
+                z-index: 100;
+            }
+        </style>
+
+    </head>
+    
+	<body>
+        <div id = "stats">
+            <p id ="scoreboard"></p>
+        </div>
+		<div id="blocker">
+
+			<div id="instructions">
+				<span style="font-size:40px">Click to play</span>
+				<br />
+				(W, A, S, D = Move, SPACE = Shoot Bullet, MOUSE = Look around)
+            </div>
+        </div>
+
+        <div id="container">
+            <canvas id="webglcanvas"></canvas>
+        </div>
+        
+	</body>
+</html>
